@@ -19,12 +19,15 @@ module.exports = (robot) ->
       ]
 
     robot.hear /(もやし|モヤシ)/i,(msg) ->
-        msg.send "もう栽培はしない"
+        msg.send msg.random [
+          "もう栽培はしない",
+          "もやしは腐るよ"
+        ]
 
-    robot.hear /(進捗|しんちょく)/i,(msg) ->
+    robot.hear /(進捗|しんちょく|ウヒイ)/i,(msg) ->
       msg.send "ウヒイいいいいいいいいいいい"
 
-    robot.hear /(おはよう|おはざっきー)/i,(msg) ->
+    robot.hear /(おはよう|おはざっきー|おはザッキー)/i,(msg) ->
       msg.send "おはザッキー"
 
   # robot.hear /badger/i, (res) ->
