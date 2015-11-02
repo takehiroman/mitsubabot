@@ -8,18 +8,15 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-_ = require 'lodash'
-
 module.exports = (robot) ->
 
     robot.hear /(大豆|だいず)/i,(msg) ->
-      words = [
-        "腐らせました"
-        "許して"
-        "もやし買います"
+      msg.send msg.random = [
+        "腐らせました",
+        "許して",
+        "もやし買います",
         "後輩に上げました"
       ]
-      msg.send _.sample words
 
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send "もう栽培はしない"
