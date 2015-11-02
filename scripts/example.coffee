@@ -10,6 +10,18 @@
 
 module.exports = (robot) ->
 
+    robot.hear /(大豆|だいず)/i,(msg) ->
+      msg.send "腐らせました"
+
+    robot.hear /(もやし|モヤシ)/i,(msg) ->
+        msg.send "もう栽培はしない"
+
+    robot.hear /(進捗|しんちょく)/i,(msg) ->
+      msg.send "ウヒイいいいいいいいいいいい"
+
+    robot.hear /(おはよう|おはざっきー)/i,(msg) ->
+      msg.send "おはザッキー"
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
