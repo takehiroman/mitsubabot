@@ -11,7 +11,7 @@
 module.exports = (robot) ->
 
     robot.hear /(大豆|だいず)/i,(msg) ->
-      msg.send msg.random = [
+      msg.send msg.random [
         "腐らせました",
         "許して",
         "もやし買います",
