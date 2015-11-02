@@ -8,6 +8,8 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
+_ = require 'lodash'
+
 module.exports = (robot) ->
 
     robot.hear /(大豆|だいず)/i,(msg) ->
@@ -17,7 +19,7 @@ module.exports = (robot) ->
         "もやし買います"
         "後輩に上げました"
       ]
-      msg.send words
+      msg.send _.sample words
 
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send "もう栽培はしない"
