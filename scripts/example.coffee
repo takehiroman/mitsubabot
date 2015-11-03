@@ -53,7 +53,7 @@ module.exports = (robot) ->
          hour = ('0' + d.getHours()).slice(-2)
          minute = ('0' + d.getMinutes()).slice(-2)
          time = "今は" + hour + "時" + minute + "分です"
-         msg.send d
+         msg.send time
          msg.finish()
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
