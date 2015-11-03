@@ -47,7 +47,11 @@ module.exports = (robot) ->
  ＿/し' ／／  Ｖ｀Д´）/
  （＿フ彡            / ←>>1
 '''
-
+       robot.hear /(何時)/i,(msg) ->
+         d = new Date
+    　hour = ('0' + d.getHours()).slice(-2)
+    　minute = ('0' + d.getMinutes()).slice(-2)
+         msg.send "今は"d"です"
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
