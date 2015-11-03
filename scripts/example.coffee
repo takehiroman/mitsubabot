@@ -36,6 +36,18 @@ module.exports = (robot) ->
       robot.hear /(ばか|あほ)/i,(msg) ->
         msg.send "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160416.png"
 
+     robot.hear /ぬるぽ/, (msg) ->
+        msg.send '''
+
+   Λ＿Λ    ＼＼
+  （ ・∀・）   | | ｶﾞｯ
+ と       ）   | |
+   Ｙ /ノ     人
+    / ）     <  >  _Λ∩
+ ＿/し' ／／  Ｖ｀Д´）/
+ （＿フ彡            / ←>>1
+'''
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
