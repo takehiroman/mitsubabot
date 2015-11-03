@@ -52,7 +52,8 @@ module.exports = (robot) ->
          d = new Date
          hour = ('0' + d.getHours()).slice(-2)
          minute = ('0' + d.getMinutes()).slice(-2)
-         time = "今は" + hour + "時" + minute + "分です"
+         sec = ('0' + d.getSeconds()).slice(-2)
+         time = "今は" + hour + "時" + minute + "分" + sec + "秒です"
          msg.send time
          msg.finish()
   # robot.hear /badger/i, (res) ->
