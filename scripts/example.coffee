@@ -56,6 +56,14 @@ module.exports = (robot) ->
          time = "今は" + hour + "時" + minute + "分" + sec + "秒です"
          msg.send time
          msg.finish()
+
+         robot.hear /(何日)/i,(msg) ->
+           day = new Date
+           month = ('0' + day.getMonth()).slice(-2)
+           days = ('0' + day.getDate()).slice(-2)
+           dayes = "今日は" + month + "月" + days + "日です"
+           msg.send dayes
+           msg.finish()
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
