@@ -30,6 +30,9 @@ module.exports = (robot) ->
     robot.hear /(おはよう|おはざっきー|おはザッキー)/i,(msg) ->
       msg.send "おはザッキー"
 
+    robot.hear /(えらい|すごい|かっこいい)/i,(msg) ->
+      msg.send "https://pbs.twimg.com/media/CSJIyliVAAAw4zf.jpg"
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
