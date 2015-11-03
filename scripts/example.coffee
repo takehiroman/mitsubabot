@@ -50,7 +50,7 @@ module.exports = (robot) ->
 
        robot.hear /何時/i,(msg) ->
          d = new Date
-         hour = ('0' + d.getHours()).slice(-2) + 9
+         hour = ('0' + d.getHours()+ 9).slice(-2)
          minute = ('0' + d.getMinutes()).slice(-2)
          time = "今は" + hour + "時" + minute + "分です"
          msg.send time
