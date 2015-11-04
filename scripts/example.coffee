@@ -37,7 +37,7 @@ module.exports = (robot) ->
       msg.send "ウヒイいいいいいいいいいいい"
 
     robot.hear /(おはよう|おはざっきー|おはザッキー)/i,(msg) ->
-      msg.send "おはザッキー"
+      msg.send "おはザッキ一"
 
     robot.hear /(えらい|すごい|かっこいい)/i,(msg) ->
       msg.send "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160423.jpg"
