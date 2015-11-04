@@ -22,7 +22,8 @@ module.exports = (robot) ->
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send msg.random [
           "もう栽培はしない",
-          "もやしは腐るよ"
+          "もやしは腐るよ",
+          "もやし最高"
         ]
 
     robot.hear /(じゃんけん)/i,(msg) ->
