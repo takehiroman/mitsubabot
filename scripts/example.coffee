@@ -27,9 +27,9 @@ module.exports = (robot) ->
 
     robot.hear /(じゃんけん)/i,(msg) ->
        msg.send msg.random [
-            "グー",
-            "チョキ",
-            "パー"
+            "グー✊",
+            "チョキ✌️",
+            "パー✋"
          ]
 
     robot.hear /(進捗|しんちょく|ウヒイ)/i,(msg) ->
