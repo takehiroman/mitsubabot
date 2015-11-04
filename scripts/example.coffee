@@ -37,7 +37,7 @@ module.exports = (robot) ->
       msg.send "ウヒイいいいいいいいいいいい"
 
     robot.hear/(おやすみ)/i,(msg) ->
-      msg.sed "おやすミツバ"
+      msg.send "おやすミツバ"
 
     robot.hear /(おはよう|おはざっきー|おはザッキー)/i,(msg) ->
       msg.send "おはザッキ一"
