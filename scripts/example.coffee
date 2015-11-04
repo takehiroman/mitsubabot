@@ -18,6 +18,13 @@ module.exports = (robot) ->
         "後輩に上げました"
       ]
 
+      roboto.hear/(じゃんけん)/i,(msg) ->
+        msg.send msg.random [
+          "グー✊",
+          "チョキ✌️",
+          "パー✋"
+        ]
+
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send msg.random [
           "もう栽培はしない",
