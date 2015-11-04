@@ -18,18 +18,19 @@ module.exports = (robot) ->
         "後輩に上げました"
       ]
 
-      roboto.hear/(じゃんけん)/i,(msg) ->
-        msg.send msg.random [
-          "グー✊",
-          "チョキ✌️",
-          "パー✋"
-        ]
 
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send msg.random [
           "もう栽培はしない",
           "もやしは腐るよ"
         ]
+
+    robot.hear /(じゃんけん)/i,(msg) ->
+       msg.send msg.random [
+            "グー",
+            "チョキ",
+            "パー"
+         ]
 
     robot.hear /(進捗|しんちょく|ウヒイ)/i,(msg) ->
       msg.send "ウヒイいいいいいいいいいいい"
@@ -71,6 +72,7 @@ module.exports = (robot) ->
            dayes = "今日は" + month + "月" + days + "日です"
            msg.send dayes
            msg.finish()
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
