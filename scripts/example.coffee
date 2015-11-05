@@ -17,12 +17,6 @@ module.exports = (robot) ->
         "後輩に上げました"
       ]
 
-  robot.respond /((飯テロ|めしてろ))/i, (msg) ->
-    robot.http("https://api.instagram.com/v1/tags/飯テロ/media/recent?access_token=#{TOKEN}")
-    .get() (err, res, body) ->
-      records = JSON.parse(body)['data']
-      msg.send records[0].images.standard_resolution.url
-
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send msg.random [
           "もう栽培はしない",
