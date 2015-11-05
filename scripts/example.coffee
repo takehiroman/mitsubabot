@@ -33,6 +33,16 @@ module.exports = (robot) ->
             "パー✋"
          ]
 
+    robot.hear /(おみくじ)/i,(msg) ->
+      msg.send msg.random [
+        "大吉",
+        "中吉",
+        "小吉",
+        "吉",
+        "凶",
+        "大凶ですwwwざまぁwww"
+      ]
+
     robot.hear /(進捗|しんちょく|ウヒイ)/i,(msg) ->
       msg.send "ウヒイいいいいいいいいいいい"
 
