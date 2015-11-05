@@ -7,14 +7,6 @@
 #   Uncomment the ones you want to try and experiment with.
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
-tumblr = require "tumblrbot"
-SOURCES = {
-  "http://k-ui.tumblr.com/tagged/%E3%81%94%E6%B3%A8%E6%96%87%E3%81%AF%E3%81%86%E3%81%95%E3%81%8E%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F"
-}
-      getGif = (blog, msg) ->
-        tumblr.photos(blog).random (post) ->
-          msg.send photos[0].original_size.url
-
 module.exports = (robot) ->
 
     robot.hear /(大豆|だいず)/i,(msg) ->
@@ -24,9 +16,6 @@ module.exports = (robot) ->
         "もやし買います",
         "後輩に上げました"
       ]
-        robot.respond /ごちうさ/i, (msg) ->
-          blog = msg.random Object.keys(SOURCES)
-          getGif blog, msg
 
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send msg.random [
