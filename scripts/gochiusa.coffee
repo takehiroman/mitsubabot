@@ -1,5 +1,5 @@
 # Description:
-#   lovelivegif.tumblr.comからラブライブgifアニメ出す
+#   lovelivegif.tumblr.comからごちうさgifアニメ出す
 #
 # Dependencies:
 #   "tumblrbot": "0.1.0"
@@ -8,11 +8,11 @@
 #   HUBOT_TUMBLR_API_KEY - A Tumblr OAuth Consumer Key will work fine
 #
 # Commands:
-#   llgif / lovelivegif - ラブライブgifアニメをランダムで出す
+#   gochiusa - ごちうさgifアニメをランダムで出す
 
 tumblr = require "tumblrbot"
 SOURCES = {
-  "lovelivegif.tumblr.com"
+  "http://k-ui.tumblr.com"
 }
 
 getGif = (blog, msg) ->
@@ -20,6 +20,6 @@ getGif = (blog, msg) ->
     msg.send post.photos[0].original_size.url
 
 module.exports = (robot) ->
-  robot.respond /llgif|lovelive/i, (msg) ->
+  robot.respond /pyon2|gochiusa/i, (msg) ->
     blog = msg.random Object.keys(SOURCES)
     getGif blog, msg
