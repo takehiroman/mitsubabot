@@ -17,6 +17,8 @@ module.exports = (robot) ->
         "後輩に上げました"
       ]
 
+
+
     robot.hear /(もやし|モヤシ)/i,(msg) ->
         msg.send msg.random [
           "もう栽培はしない",
@@ -56,20 +58,6 @@ module.exports = (robot) ->
 
       robot.hear /(ばか|あほ|バカ|アホ)/i,(msg) ->
         msg.send "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160416.png"
-
-      robot.hear /(ミツバガチャ)/i,(msg) ->
-        msg.send msg.random [
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160422.jpg",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160421.png",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160420.jpg",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160419.jpg",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160418.jpg",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160417.png",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160415.png",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160411.png",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160412.jpg",
-                      "http://f.st-hatena.com/images/fotolife/t/takehanogi11/20151103/20151103160416.png"
-                    ]
 
      robot.hear /ぬるぽ/, (msg) ->
         msg.send '''
