@@ -12,7 +12,7 @@
 
 tumblr = require "tumblrbot"
 SOURCES = {
-  "lovelivegif.tumblr.com"
+  "http://k-ui.tumblr.com/tagged/%E3%81%94%E6%B3%A8%E6%96%87%E3%81%AF%E3%81%86%E3%81%95%E3%81%8E%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F"
 }
 
 getGif = (blog, msg) ->
@@ -20,6 +20,6 @@ getGif = (blog, msg) ->
     msg.send post.photos[0].original_size.url
 
 module.exports = (robot) ->
-  robot.hear /llgif|lovelivegif/i, (msg) ->
+  robot.hear /gochiusa/i, (msg) ->
     blog = msg.random Object.keys(SOURCES)
     getGif blog, msg
