@@ -12,7 +12,7 @@
 
 tumblr = require "tumblrbot"
 SOURCES = {
-  "k-ui.tumblr.com":/(ご注文はうさぎですか？ )( me)?/i
+  "k-ui.tumblr.com":/(ご注文はうさぎですか？ )( tagged)?/i
 }
 
 getGif = (blog, msg) ->
