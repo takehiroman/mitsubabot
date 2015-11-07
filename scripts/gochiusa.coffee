@@ -10,20 +10,9 @@
 # Commands:
 #   gochiusa - ごちうさgifアニメをランダムで出す
 
-tumblr = require "tumblrbot"
-SOURCES = {
-  "k-ui.tumblr.com","tagged","%E3%81%94%E6%B3%A8%E6%96%87%E3%81%AF%E3%81%86%E3%81%95%E3%81%8E%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F"
-}
-
-getGif = (blog, msg) ->
-  tumblr.photos(blog).random (post) ->
-    msg.send post.photos[0].original_size.url
-
-getPost = (blog,msg) ->
-  tumblr.posts(SOURCES).last 1,{tag:"ご注文はうさぎですか？"},(data) ->
-    msg.send post.title for post in data.posts
 
 module.exports = (robot) ->
   robot.respond /pyon2|gochiusa/i, (msg) ->
-    blog = msg.random Object.keys(SOURCES)
-    getgif blog, msg
+      msg.send msg.random [
+        "https://www.dropbox.com/sh/r72n0fm36zi6p29/AABpeMtXqceZ5UPkiimSbMJYa/_2bfa53d667a2a90afe3ab38714f767fd_tumblr_nw0fisSjjr1qz64n4o1_500.gif?dl=0&raw=1"
+      ]
