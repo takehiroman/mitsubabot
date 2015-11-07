@@ -10,7 +10,7 @@
 # Commands:
 #   gochiusa - ごちうさgifアニメをランダムで出す
 
-umblr = require "tumblrbot"
+tumblr = require "tumblrbot"
 SOURCES = {
   "zakimoto.tumblr.com"
 }
