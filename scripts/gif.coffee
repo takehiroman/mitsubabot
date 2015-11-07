@@ -11,9 +11,6 @@
 #   llgif / lovelivegif - ラブライブgifアニメをランダムで出す
 
 tumblr = require "tumblrbot"
-SOURCES = {
-  "lovelivegif.tumblr.com"
-}
 
 getGif = (blog, msg) ->
   tumblr.photos(blog).random (post) ->
@@ -21,5 +18,5 @@ getGif = (blog, msg) ->
 
 module.exports = (robot) ->
   robot.respond /llgif|lovelive/i, (msg) ->
-    blog = msg.random Object.keys(SOURCES)
+    blog = msg.random Object.keys("lovelivegif.tumblr.com")
     getGif blog, msg

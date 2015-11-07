@@ -26,4 +26,4 @@ getPost = (blog,msg) ->
 module.exports = (robot) ->
   robot.respond /pyon2|gochiusa/i, (msg) ->
     blog = msg.random Object.keys(SOURCES)
-    getPost blog, msg
+    getGif blog, msg
