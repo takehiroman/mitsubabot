@@ -12,7 +12,7 @@
 
 tumblr = require "tumblrbot"
 SOURCES = {
-  "k-ui.tumblr.com"
+  "k-ui.tumblr.com","tagged","%E3%81%94%E6%B3%A8%E6%96%87%E3%81%AF%E3%81%86%E3%81%95%E3%81%8E%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F"
 }
 
 getGif = (blog, msg) ->
@@ -26,4 +26,4 @@ getPost = (blog,msg) ->
 module.exports = (robot) ->
   robot.respond /pyon2|gochiusa/i, (msg) ->
     blog = msg.random Object.keys(SOURCES)
-    getPost blog, msg
+    getgif blog, msg
