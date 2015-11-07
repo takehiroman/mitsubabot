@@ -20,7 +20,7 @@ getGif = (blog, msg) ->
     msg.send post.photos[0].original_size.url
 
 getPost = (blog,msg) ->
-  tumblr.posts("k-ui.tumblr.com").last 1,{tag:"ご注文はうさぎですか？"},(data) ->
+  tumblr.posts(SOURCES).last 1,{tag:"ご注文はうさぎですか？"},(data) ->
     msg.send post.title for post in data.posts
 
 module.exports = (robot) ->
