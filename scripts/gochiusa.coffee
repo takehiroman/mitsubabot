@@ -20,6 +20,6 @@ getGif = (blog, msg) ->
     msg.send post.photos[0].original_size.url
 
 module.exports = (robot) ->
-  robot.respond /gochiusagif/i, (msg) ->
+  robot.respond /gochiusagif|pyongif/i, (msg) ->
     blog = msg.random Object.keys(SOURCES)
     getGif blog, msg
